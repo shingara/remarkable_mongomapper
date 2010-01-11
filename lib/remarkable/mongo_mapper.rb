@@ -11,14 +11,14 @@ end
  
 # Add locale
 dir = File.dirname(__FILE__)
-Remarkable.add_locale File.join(dir, '..', 'locales', 'en.yml')
+Remarkable.add_locale File.join(dir, '..', '..', 'locales', 'en.yml')
 
-require File.join(dir, 'remarkable_mongomapper', 'base')
-require File.join(dir, 'remarkable_mongomapper', 'describe')
+require File.join(dir, 'mongo_mapper', 'base')
+require File.join(dir, 'mongo_mapper', 'describe')
 # require File.join(dir, 'remarkable_mongomapper', 'human_names')
 
 # Add matchers
-Dir[File.join(dir, 'remarkable_mongomapper', 'matchers', '*.rb')].each do |file|
+Dir[File.join(dir, 'mongo_mapper', 'matchers', '*.rb')].each do |file|
   require file
 end
 

@@ -21,5 +21,3 @@ It is far from complete! It'd be very helpful to have some help.
 ## Contributors
 
 * Nicolas Mérouze
-* Mathieu Fosse
-* Vincent Hellot
