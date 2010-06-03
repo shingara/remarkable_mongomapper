@@ -9,10 +9,10 @@ describe 'validate_length_of' do
 
     @model = define_model :product do
       include MongoMapper::Document
-      
+
       key :size, String
       key :category, String
-      
+
       validates_length_of :size, options
     end
 
@@ -21,7 +21,7 @@ describe 'validate_length_of' do
 
   describe 'messages' do
     before(:each){ @matcher = define_and_validate }
-  
+
     it 'should contain a description' do
       @matcher.within(3..5)
       @matcher.description.should == 'ensure length of size is within 3..5 characters'

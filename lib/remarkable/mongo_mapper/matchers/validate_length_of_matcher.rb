@@ -7,12 +7,11 @@ module Remarkable
         optional :within, :minimum, :maximum, :is
         optional :allow_nil, :allow_blank, :default => true
         optional :message
-        
+
         default_options :message => "is invalid"
 
-        collection_assertions :less_than_min_length?, :exactly_min_length?,
-                              :more_than_max_length?, :exactly_max_length?,
-                              :allow_nil?, :allow_blank?
+        collection_assertions :allow_nil?, :allow_blank?, :less_than_min_length?, :exactly_min_length?,
+                              :more_than_max_length?, :exactly_max_length?
 
         before_assert do
           if @options[:is]

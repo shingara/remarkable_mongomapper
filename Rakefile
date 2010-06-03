@@ -10,9 +10,9 @@ begin
     gem.email = "nicolas.merouze@gmail.com"
     gem.homepage = "http://github.com/nmerouze/remarkable_mongo"
     gem.authors = ["Nicolas Mérouze"]
-    
-    gem.add_dependency('remarkable',  '~> 3.1.8')
-    gem.add_dependency('mongo_mapper', '~> 0.6.1')
+
+    gem.add_dependency('remarkable')
+    gem.add_dependency('mongo_mapper', '~>0.7.6')
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
